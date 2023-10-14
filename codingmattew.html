@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pencarian Karyawan Sekolah</title>
+    <style>
+        /* CSS untuk styling keseluruhan halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS untuk header dengan logo dan nama sekolah */
+        .header {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .school-logo {
+            width: 60px;
+            height: 65px;
+            margin-right: 10px;
+        }
+
+        .school-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .school-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .user-name {
+            font-weight: normal;
+        }
+
+        .logout-button {
+            background-color: #fff;
+            color: #4285f4;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        /* CSS untuk styling search bar */
+        .search-container {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .search-box {
+            display: flex;
+            background-color: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS untuk styling tabel */
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4285f4;
+            color: #fff;
+        }
+
+        /* CSS untuk tombol Next di pojok kanan bawah */
+        .next-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dengan logo sekolah dan nama sekolah -->
+    <div class="header">
+        <img src="img/logo_nusput.png" alt="Logo Sekolah" class="school-logo">
+        <div class="school-info">
+            <div class="school-name">Yayasan Nusaputra</div>
+            <div class="user-name">Halo, Kepsek</div>
+        </div>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Cari NIP atau Nama Karyawan">
+            <button type="submit" class="search-button">Search</button>
+        </div>
+    </div>
+
+    <!-- Tabel NIP karyawan dan nama karyawan -->
+    <div class="content">
+        <h2>NIP Karyawan dan Nama Karyawan di Sekolah</h2>
+        <table>
+            <tr>
+                <th>NIP</th>
+                <th>Nama Karyawan</th>
+            </tr>
+            <tr>
+                <td>NIP001</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>NIP002</td>
+                <td>Jane Smith</td>
+            </tr>
+            <tr>
+                <td>NIP003</td>
+                <td>Alice Johnson</td>
+            </tr>
+            <!-- Tambahkan lebih banyak data jika diperlukan -->
+        </table>
+    </div>
+
+    <!-- Tombol Next di pojok kanan bawah -->
+    <button class="next-button">Next</button>
+
+    <script>
+        function logout() {
+            // Tambahkan logika logout di sini
+            alert('Anda berhasil logout.');
+        }
+    </script>
+</body>
+</html>

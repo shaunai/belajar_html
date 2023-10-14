@@ -1,0 +1,98 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Styles for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styles for the form section */
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles for the hasil section */
+.hasil-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hasil-section h2 {
+    margin-bottom: 10px;
+}
+
+/* Add this CSS to center-align the table */
+#hasil-penilaian {
+    text-align: center;
+}
+
+#hasil-penilaian table {
+    margin: 0 auto; /* This centers the table horizontally */
+}
+
+/* Optional: Style the table for better readability */
+#hasil-penilaian table {
+    border-collapse: collapse;
+    width: 80%; /* Adjust the width as needed */
+}
+
+#hasil-penilaian th, #hasil-penilaian td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#hasil-penilaian th {
+    background-color: #f2f2f2;
+}
+
+/* Styles for the hasil penilaian */
+#hasil-penilaian {
+    /* Hasil penilaian akan ditampilkan di sini */
+}

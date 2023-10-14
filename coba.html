@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Penilaian SDM</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Penilaian SDM</h1>
+    </header>
+    
+    <main>
+        <section class="form-section">
+            <h2>Form Penilaian</h2>
+            <form id="penilaianForm">
+                <p>Petunjuk: Berilah tanda "O" pada kolom yang paling sesuai dengan keadaan/bukti.</p>
+                <p>Skala Penilaian:</p>
+
+                <ul>
+                        <li>Nilai 0: jika terlambat lebih dari 5 kali</li>
+                        <li>Nilai 1: jika terlambat <= 5 kali</li>
+                        <li>Nilai 2: jika tidak pernah terlambat</li>
+                </ul>
+
+                <br></br>
+                <p1>Aspek Penilaian</p1>
+
+                <br></br>
+                <p2>Penilaian Kedisiplinan</p2>
+
+                <br></br>
+
+                <label for="Id_Guru">NIP / Nama :</label>
+                <select id="Id_Guru" name="Id_Guru" required>
+                <option value=""></option> 
+                <option value="NIP001">NIP001</option> 
+                <option value="NIP002">NIP002</option>
+                <option value="NIP003">NIP003</option>
+                <option value="NIP004">NIP004</option>
+                </select>
+
+                <br></br>
+
+                <label for="absensi">Absensi: </label>
+                <select id="absensi" name="absensi" required>
+                <option value=""></option> 
+                <option value="0">O</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>
+
+                <br></br>
+                
+                <label for="pemakaian_seragam">Pemakaian Seragam: </label>
+                <select id="pemakaian_seragam" name="pemakaian_seragam" required>
+                <option value=""></option>    
+                <option value="0">O</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>                
+                
+                <br></br>
+                
+                <label for="buku_izin">Pemakaian Buku Izin: </label>
+                <select id="buku_izin" name="buku_izin" required>
+                <option value=""></option>    
+                <option value="0">O</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>                
+                
+                <br></br>
+                
+                <label for="kepentingan_pribadi">Izin Kepentingan Pribadi (Diluar Sakit): </label>
+                <select id="kepentingan_pribadi" name="kepentingan_pribadi" required>
+                <option value=""></option>    
+                <option value="0">O</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>       
+                
+                <br></br>
+                
+                <label for="apresiasi_presensi">Apresiasi Guru Tertib Presensi: </label>
+                <select id="apresiasi_presensi" name="apresiasi_presensi" required>
+                <option value=""></option>    
+                <option value="0">O</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                </select>       
+                
+                </select>
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+        <section class="hasil-section">
+            <h2>Hasil Penilaian</h2>
+            <div id="hasil-penilaian">
+                <!-- Hasil penilaian will be displayed here -->
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Handle form submission
+        document.getElementById("penilaianForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+    
+            // Collect and process form data (you can customize this part)
+            var formData = new FormData(this);
+            
+            var hasil = '<h2>Hasil Penilaian</h2>';
+            hasil += '<table>';
+            hasil += '<tr><th>Field Name</th><th>Value</th></tr>';
+            
+            for (var pair of formData.entries()) {
+                hasil += '<tr><td>' + pair[0] + '</td><td>' + pair[1] + '</td></tr>';
+            }
+            
+            hasil += '</table>';
+            
+            // Display the result in the "hasil-penilaian" div
+            document.getElementById("hasil-penilaian").innerHTML = hasil;
+        });
+    </script>
+</body>
+</html>
